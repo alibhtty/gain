@@ -79,7 +79,7 @@ header .days{
 #titulo {
   text-align: center;
   /* padding-top: .5em; */
-  padding-top: 1.5em;
+  padding-top: 1.2em;
   /* margin: .5em 0; */
 }
 
@@ -353,6 +353,6 @@ ul {
   @media screen and (display-mode: standalone) {
   header{
     top: 0;
-    padding-top: 40px;
+    margin-top: 40px;
   }
 }
