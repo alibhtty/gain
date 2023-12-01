@@ -69,7 +69,7 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
-  height: 100px;
+  height: 90px;
   background-color: #000000;
   background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgb(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
   z-index: 1;
@@ -219,12 +219,8 @@ ul {
 
 
 /* ========== LEYENDA =========== */
-/* .leyenda {
-  display: none;
-  transition: opacity .5s ease-in-out;
-  opacity: 0;
-} */
 .leyenda{
+  /* display: none; */
   height: auto;
   margin: 0 2.5em;
   padding: 0 10px;
@@ -233,7 +229,11 @@ ul {
   color: #bbbbbb;
   background-color: #111;
   transition: opacity .5s ease-in-out;
+  transition: all ease-in-out .5s;
   opacity: 0;
+}
+.leyenda:active{
+  scale: 1.05;
 }
 .players{
   display: grid;
@@ -350,7 +350,12 @@ ul {
   }
   .squares li {
     border-radius: 4px;
+    transition: all ease-in-out .5s;
   }
+  /* .squares li:active {
+    background-color: #333;
+    scale: 2;
+  } */
 }
 
 
