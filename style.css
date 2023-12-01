@@ -1,0 +1,339 @@
+/* Article - https://bitsofco.de/github-contribution-graph-css-grid/ */
+
+/* Grid-related CSS */
+
+:root {
+  --square-size: 15px;
+  --square-gap: 5px;
+  --week-width: calc(var(--square-size) + var(--square-gap));
+
+  --user1: rgb(115, 255, 0);
+  --user1low: rgb(115, 255, 0, .2);
+
+  --user2: rgb(255, 111, 0);
+  --user2low: rgb(255, 111, 0, .2);
+}
+
+.months { grid-area: months; }
+.days { grid-area: days; }
+.squares { grid-area: squares; }
+
+.graph {
+  width: 100%;
+  display: inline-grid;
+  grid-template-areas: "empty days"
+                       "months squares";
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
+}
+
+.months {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-rows: calc(var(--week-width) * 4) /* Nov */
+                      calc(var(--week-width) * 5) /* Dic */
+
+                      calc(var(--week-width) * 4) /* Ene */
+                      calc(var(--week-width) * 4) /* Feb */
+                      calc(var(--week-width) * 4) /* Mar */
+                      calc(var(--week-width) * 5) /* Abr */
+                      calc(var(--week-width) * 4) /* May */
+                      calc(var(--week-width) * 4) /* Jun */
+                      calc(var(--week-width) * 5) /* Jul */
+                      /* calc(var(--week-width) * 4) */ /* Ago */
+                      /* calc(var(--week-width) * 4) */ /* Sep */
+                      /* calc(var(--week-width) * 5) */ /* Oct */
+}
+
+.days,
+.squares {
+  display: grid;
+  grid-gap: var(--square-gap);
+  grid-template-columns: repeat(7, var(--square-size));
+}
+
+.squares {
+  grid-auto-flow: row;
+  grid-auto-rows: var(--square-size);
+}
+
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  background-color: #000000;
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgb(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+  z-index: 1;
+}
+header .days{
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgb(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
+  height: 5rem;
+}
+#titulo {
+  text-align: center;
+  padding-top: .5em;
+}
+
+.days {
+  display: none; /* Oculta los días inicialmente */
+  transition: opacity .5s ease-in-out;
+  opacity: 0;
+}
+
+
+
+
+body {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+  background-color: #000;
+  color: #f1f1f1;
+  margin: 0;
+  overscroll-behavior-x: none;
+  /* overscroll-behavior-y: none; */
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ======== MANUAL ========= */
+.manual{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  height: auto;
+  margin: 1rem 2rem;
+}
+.manual a{
+  padding:  8px 0;
+  color: #ccc;
+  text-decoration: none;
+  background-color: #111111;
+  border-radius: 25px;
+}
+.manual a:active{
+  background-color: #222222;
+  color: #ffffff;
+}
+
+
+
+
+.graph {
+  /* padding: 20px; */
+  border: 0px #ff6600 solid;
+  margin-top: 0em;
+  /* margin: 20px; */
+}
+
+.fade{
+  position: absolute;
+  width: 100%;
+  height: 6rem;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgb(0,0,0,1) 25%, rgba(0,0,0,0) 100%);
+}
+.fade-out{
+  position: fixed;
+  width: 100%;
+  height: 20vh;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0, 0) 100%);
+  pointer-events: none;
+}
+.contacto{
+  font-size: 10px;
+  position: relative;
+  display: block;
+  bottom: 2rem;
+  text-align: center;
+  z-index: 999;
+  color: #eee;
+}
+.contacto a{
+  color: #7bc96f;
+  text-decoration: none;
+}
+
+
+.days li:nth-child(odd) {
+  visibility: hidden;
+}
+
+.squares li {
+  background-color: #112112;  /* ebedf0 */
+}
+
+.squares li[data-level="1"] {
+  background-color: #ebedf0;
+}
+
+.squares li[data-level="2"] {
+  background-color: #c6e48b;
+}
+
+.squares li[data-level="3"] {
+  background-color: #7bc96f;
+}
+
+.squares li[data-level="4"] {
+  background-color: #111114;
+}
+
+
+.squares li {
+  color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.perfil {
+  border: solid 1px #555;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+
+
+
+
+/* ========== LEYENDA =========== */
+/* .leyenda {
+  display: none;
+  transition: opacity .5s ease-in-out;
+  opacity: 0;
+} */
+.leyenda{
+  /* width: 80%; */
+  height: auto;
+  margin: 0 2.5em;
+  padding: 0 10px;
+  border: solid 0px #333;
+  border-radius: 10px;
+  color: #bbbbbb;
+  background-color: #111;
+  transition: opacity .5s ease-in-out;
+}
+.players{
+  display: grid;
+  grid-template-columns: 30vw 1fr 15vw;
+}
+.player{
+  display: block;
+  padding: 2px 2px;
+}
+.player a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  font-size: 12px;
+  display: flex;
+  margin: 8px 0;
+  padding: 4px 12px;
+  background-color: rgb(60,60,60,.4);
+  border-radius: 25px 0 0 25px;
+}
+.player a.win{
+  border-radius: 0 25px 25px 0;
+  width: auto;
+  background-color: rgb(60,60,60,.4);
+}
+/* .player-win h1{
+  color: #e0e0e0;
+  font-size: 13px;
+  margin: 5px 0;
+  padding-bottom: 0.1em;
+}
+.player-win a{
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  font-size: 12px;
+  display: flex;
+  margin: 8px 0;
+  padding: 4px 12px;
+  background-color: #333;
+  border-radius: 25px;
+  background-color: #7bc96f;
+} */
+.color1{
+  margin-left: 10px;
+  padding: 0 0;
+  width: 6px;
+  height: 6px;
+  background-color: var(--user1);
+  border-radius: 5px;
+}
+.color2{
+  margin-left: 10px;
+  padding: 0 0;
+  width: 6px;
+  height: 6px;
+  background-color: var(--user2);
+  border-radius: 5px;
+}
+.player a.user1{
+  width: 80%;
+  background-color: var(--user1low);
+}
+.player a.user2{
+  width: 80%;
+  background-color: var(--user2low);
+}
+.player h1{
+  color: #e0e0e0;
+  font-size: 12px;
+  margin: 5px 0;
+  padding-bottom: .1em;
+}
+
+
+
+/* Add media query for mobile devices */
+@media (max-width: 600px) {
+  :root {
+    --square-size: 8vw; /* 15px */
+    --square-gap: 2vw;
+    --week-width: calc(var(--square-size) + var(--square-gap));
+  }
+  
+  .graph {
+    width: 100%;
+    grid-template-columns: 15% 1fr;
+    margin-bottom: 4em;
+  }
+  .days{
+    margin: 0;
+    margin-top: 0rem; /* 2rem */
+    padding: 0;
+  }
+  .months{
+    position: relative;
+    width: 100%;
+    right: 10%;
+  }
+  .squares {
+    width: 100%;
+    grid-auto-flow: row;
+    padding: 0;
+    margin: 0;
+    grid-auto-rows: var(--square-size);
+  }
+  .squares li {
+    border-radius: 4px;
+  }
+}
