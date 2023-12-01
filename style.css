@@ -352,7 +352,8 @@ ul {
 /* @media (orientation: portrait) { */
 @media screen and (display-mode: standalone) {
   header{
-    top: -44px;
-    padding-top: 44px;
+    height: 100px;
+    top: -50px;
+    padding-top: 24px;
   }
 }
