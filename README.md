@@ -1,14 +1,14 @@
-# Cyborg.
+# Gain x Gain.
 
-Street Photography. @4B
+Rutinas. @4B
 
 ## Ver App
-- [Galería 🔥](https://alibhtty.com/cyborg)
+- [Galería 🔥](https://alibhtty.com/go)
 
 ## Tecnologías
 * Js
 * CSS
 * PWA
 
-Website. [Cyborg 4B](https://alibhtty.com/cyborg/)
+Website. [Cyborg 4B](https://alibhtty.com/go/)
 
