@@ -75,7 +75,9 @@ header .days{
 }
 #titulo {
   text-align: center;
+  /* padding-top: .5em; */
   padding-top: .5em;
+  margin: .5em 0;
 }
 
 .days {
@@ -153,7 +155,7 @@ ul {
   font-size: 10px;
   position: relative;
   display: block;
-  bottom: 2rem;
+  bottom: 3rem;
   text-align: center;
   z-index: 999;
   color: #eee;
@@ -215,7 +217,6 @@ ul {
   opacity: 0;
 } */
 .leyenda{
-  /* width: 80%; */
   height: auto;
   margin: 0 2.5em;
   padding: 0 10px;
@@ -224,6 +225,7 @@ ul {
   color: #bbbbbb;
   background-color: #111;
   transition: opacity .5s ease-in-out;
+  opacity: 0;
 }
 .players{
   display: grid;
@@ -231,7 +233,7 @@ ul {
 }
 .player{
   display: block;
-  padding: 2px 2px;
+  padding: 2px 3px;
 }
 .player a{
   display: flex;
@@ -243,10 +245,10 @@ ul {
   margin: 8px 0;
   padding: 4px 12px;
   background-color: rgb(60,60,60,.4);
-  border-radius: 25px 0 0 25px;
+  border-radius: 25px 4px 4px 25px;
 }
 .player a.win{
-  border-radius: 0 25px 25px 0;
+  border-radius: 4px 25px 25px 4px;
   width: auto;
   background-color: rgb(60,60,60,.4);
 }
@@ -286,6 +288,11 @@ ul {
   background-color: var(--user2);
   border-radius: 5px;
 }
+
+.player a.user{
+  border-radius: 25px;
+}
+
 .player a.user1{
   width: 80%;
   background-color: var(--user1low);
@@ -335,5 +342,13 @@ ul {
   }
   .squares li {
     border-radius: 4px;
+  }
+}
+
+
+/* @media (orientation: portrait) { */
+@media (display-mode: standalone) {
+  header{
+    padding-top: 40px;
   }
 }
