@@ -23,7 +23,7 @@ var diasDelAño = [
     { dia: 18, nivel: 0 },
     { dia: 19, nivel: 4 },
 
-    { dia: 20, nivel: 3 },
+    { dia: 20, nivel: 0 },
     { dia: 21, nivel: 3 },
     { dia: 22, nivel: 3 },
     { dia: 23, nivel: 3 },
