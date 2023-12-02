@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charSet="UTF-8" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-title" content="GAINxGAIN">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,23 +32,39 @@
     <meta name="twitter:description" content="Entrenando en casa - &quot;Gain x Gain &quot; It's GxG"/>
     <meta name="twitter:image" content="./assets/icons/meta.jpg"/>
 
-
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Grids</title>
     <link rel="stylesheet" href="./style.css">
+
+
+    <style>
+      @media screen and (orientation: landscape) {
+
+        :root {
+                --square-size: 35px;
+                --square-gap: 8px;
+              }
+        .graph {
+          /* background-color: #00a2ff;
+          overscroll-behavior-x: none; */
+          width: 100%;
+          margin-right: 0;
+        }
+        .squares li{
+          border-radius: 4px;
+        }
+      }
+    </style>
 </head>
 <body>
     
   <header>
-    <h1 id="titulo">BURPEES</h1>
+    <h1 id="titulo">BURP<b>EE</b>S</h1>
 
-    <section>
+    <div>
       <div class="leyenda">
         <div class="players">
           <div class="player">
-            <h1>Participantes</h1>
+            <h1> Usuarios </h1>
             <a class="user">Ali Bhtty
               <div class="color1"></div>
             </a>
@@ -58,20 +74,20 @@
           </div>
   
           <div class="player">
-            <h1>Apuestas <b style="color: #00a2ff;">por mes</b> </h1>
+            <h1> Estado <b style="color: #00a2ff;">de pagos</b> </h1>
             <a class="user1">100€</a>
             <a class="user2">100€</a>
           </div>
 
           <div class="player">
             <h1> &nbsp; </h1>
-            <a class="win"> &nbsp; </a>
-            <a class="win"> &nbsp; </a>
+            <a class="win"> RETENIDO </a>
+            <a class="win"> RETENIDO </a> <!-- &nbsp; -->
           </div>
 
         </div>
       </div>
-    </section>
+    </div>
 
     
     <ul class="days">
@@ -119,7 +135,7 @@
 
       <div class="fade"></div>
 
-        <ul style="opacity: 1; display: grid; margin-top: 2rem; text-align: center;" class="days">
+        <ul style="opacity: 1; display: grid; margin-top: 2rem; text-align: center; margin-top: 0;" class="days">
           <li>Lun</li>
           <li>Mar</li>
           <li>Mie</li>
@@ -132,7 +148,6 @@
         <ul class="months">
             <li>Nov</li>
             <li>Dic</li>
-
             <li>Ene</li>
             <li>Feb</li>
             <li>Mar</li>
@@ -143,14 +158,14 @@
             <!-- <li>Ago</li>
             <li>Sep</li>
             <li>Oct</li> -->
-          </ul>
+        </ul>
           
         <ul class="squares">
           <!-- added via javascript -->
         </ul>
 
         <div class="fade-out"></div>
-      </div>
+    </div>
 
       <div class="contacto">
         Todos los derechos reservados por
