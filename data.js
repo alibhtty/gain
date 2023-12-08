@@ -41,9 +41,9 @@ var diasDelAño = [
     { dia: 3, nivel: 4 }, /* DOM */
     { dia: 4, nivel: 3 },
     { dia: 5, nivel: 2 },
-    { dia: 6, nivel: 0 },
-    { dia: 7, nivel: 0 },
-    { dia: 8, nivel: 0 },
+    { dia: 6, nivel: 3 },
+    { dia: 7, nivel: 3 },
+    { dia: 8, nivel: 2 },
     { dia: 9, nivel: 4 },
 
     { dia: 10, nivel: 4 }, /* DOM */
