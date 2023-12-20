@@ -47,11 +47,11 @@ var diasDelAño = [
     { dia: 9, nivel: 4 },
 
     { dia: 10, nivel: 4 }, /* DOM */
-    { dia: 11, nivel: 0 },
-    { dia: 12, nivel: 0 },
-    { dia: 13, nivel: 0 },
-    { dia: 14, nivel: 0 },
-    { dia: 15, nivel: 0 },
+    { dia: 11, nivel: 3 },
+    { dia: 12, nivel: 3 },
+    { dia: 13, nivel: 3 },
+    { dia: 14, nivel: 3 },
+    { dia: 15, nivel: 3 },
     { dia: 16, nivel: 4 },
     { dia: 17, nivel: 4 }, /* DOM */
     { dia: 18, nivel: 0 },
