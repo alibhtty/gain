@@ -40,10 +40,10 @@ var diasDelAño = [
     { dia: 2, nivel: 4 },
     { dia: 3, nivel: 4 }, /* DOM */
     { dia: 4, nivel: 3 },
-    { dia: 5, nivel: 2 },
+    { dia: 5, nivel: 3 },
     { dia: 6, nivel: 3 },
     { dia: 7, nivel: 3 },
-    { dia: 8, nivel: 2 },
+    { dia: 8, nivel: 3 },
     { dia: 9, nivel: 4 },
 
     { dia: 10, nivel: 4 }, /* DOM */
@@ -54,12 +54,12 @@ var diasDelAño = [
     { dia: 15, nivel: 3 },
     { dia: 16, nivel: 4 },
     { dia: 17, nivel: 4 }, /* DOM */
-    { dia: 18, nivel: 0 },
-    { dia: 19, nivel: 0 },
+    { dia: 18, nivel: 2 },
+    { dia: 19, nivel: 2 },
 
-    { dia: 20, nivel: 0 },
-    { dia: 21, nivel: 0 },
-    { dia: 22, nivel: 0 },
+    { dia: 20, nivel: 2 },
+    { dia: 21, nivel: 2 },
+    { dia: 22, nivel: 2 },
     { dia: 23, nivel: 4 },
     { dia: 24, nivel: 4 }, /* DOM */
     { dia: 25, nivel: 0 },
